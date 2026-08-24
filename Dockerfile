@@ -20,4 +20,4 @@ ENV PORT=8080
 EXPOSE 8080
 
 # Run Streamlit on the platform-provided port
-CMD ["sh", "-c", "streamlit run dashboard.py --server.port ${PORT} --server.enableCORS false --server.headless true"]
+CMD ["sh", "-c", "streamlit run dashboard.py --server.port ${PORT} --server.address 0.0.0.0 --server.enableCORS false --server.headless true"]

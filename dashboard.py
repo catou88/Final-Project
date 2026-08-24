@@ -26,7 +26,8 @@ import streamlit as st
 
 
 PROJECT_DIR = Path(__file__).resolve().parent
-MODEL_FILE = PROJECT_DIR / "Final Project.py"
+# Use the refactored main module `final_project.py` instead of the old filename with spaces.
+MODEL_FILE = PROJECT_DIR / "final_project.py"
 DASHBOARD_ROW_LIMIT = 100_000
 
 
