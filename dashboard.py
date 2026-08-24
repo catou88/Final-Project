@@ -104,10 +104,16 @@ def load_blockfaces(source_size: int, source_mtime: float) -> pd.DataFrame:
         "endpt2_longitude",
         "endpt2_latitude",
     ]
+    optional_label_cols = [
+        "street_name",
+        "fm_addr_no",
+        "to_addr_no",
+    ]
 
     # Quick success path
     missing = [c for c in expected_cols if c not in blockfaces.columns]
-    if missing:
+    optional_missing = [c for c in optional_label_cols if c not in blockfaces.columns]
+    if missing or optional_missing:
         # Try case-insensitive and normalized-name mapping to be forgiving of header variations
         import re
 
@@ -116,7 +122,7 @@ def load_blockfaces(source_size: int, source_mtime: float) -> pd.DataFrame:
 
         cols_map = {normalize(c): c for c in blockfaces.columns}
         created = False
-        for exp in expected_cols:
+        for exp in expected_cols + optional_label_cols:
             if exp in blockfaces.columns:
                 continue
             key = normalize(exp)
@@ -459,17 +465,33 @@ else:
         "STREET",
     ]
     _found_street = next((c for c in _street_candidates if c in mapped_faces.columns), None)
-    if _found_street is None:
+    _address_candidates = [
+        ("fm_addr_no", "to_addr_no"),
+        ("FM_ADDR_NO", "TO_ADDR_NO"),
+        ("from_addr_no", "to_addr_no"),
+        ("FROM_ADDR_NO", "TO_ADDR_NO"),
+    ]
+    _found_addresses = next(
+        (
+            (from_col, to_col)
+            for from_col, to_col in _address_candidates
+            if from_col in mapped_faces.columns and to_col in mapped_faces.columns
+        ),
+        None,
+    )
+    if _found_street is None or _found_addresses is None:
         raise KeyError(
-            "Required street-name column not found in blockfaces. "
-            f"Tried {_street_candidates}. Available columns: {list(mapped_faces.columns)}"
+            "Required blockface label columns not found. "
+            f"Tried street columns {_street_candidates} and address column pairs "
+            f"{_address_candidates}. Available columns: {list(mapped_faces.columns)}"
         )
+    _from_addr_col, _to_addr_col = _found_addresses
     official_block_label = (
         mapped_faces[_found_street].astype("string").str.title()
         + " "
-        + mapped_faces["fm_addr_no"].astype("Int64").astype("string")
+        + mapped_faces[_from_addr_col].astype("Int64").astype("string")
         + "–"
-        + mapped_faces["to_addr_no"].astype("Int64").astype("string")
+        + mapped_faces[_to_addr_col].astype("Int64").astype("string")
     )
     mapped_faces["map_block_name"] = (
         mapped_faces["STREET_BLOCK"].astype("string").fillna(official_block_label)
