@@ -485,7 +485,10 @@ from sklearn.impute import SimpleImputer
 from sklearn.inspection import permutation_importance
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import FunctionTransformer, OrdinalEncoder
+from sklearn.preprocessing import FunctionTransformer, OrdinalEncoder, StandardScaler
+from sklearn.linear_model import LinearRegression
+import joblib
+from models.hist_gradient import build_model as build_hist_gradient
 
 
 TARGET_COLUMN = "occupancy_next_hour"
@@ -572,6 +575,55 @@ def make_time_split(
     return X_train, X_test, y_train, y_test, split_date
 
 
+def make_time_train_val_test_split(
+    modeling: pd.DataFrame,
+    train_fraction: float = 0.60,
+    val_fraction: float = 0.20,
+    max_rows: int | None = None,
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.Series, pd.Series, pd.Series, pd.Timestamp, pd.Timestamp]:
+    """Create chronological train / validation / test splits.
+
+    Default splits: 60% train, 20% validation, 20% test by unique dates.
+    Returns X_train, X_val, X_test, y_train, y_val, y_test, val_split_date, test_split_date
+    """
+    required_columns = MODEL_FEATURES + [TARGET_COLUMN, "date"]
+    missing_columns = [
+        column for column in required_columns if column not in modeling.columns
+    ]
+    if missing_columns:
+        raise ValueError(f"Modeling data is missing columns: {missing_columns}")
+
+    valid_rows = modeling[TARGET_COLUMN].notna() & modeling["date"].notna()
+    model_data = modeling.loc[valid_rows, required_columns].copy()
+    if max_rows is not None and len(model_data) > max_rows:
+        model_data = model_data.sample(n=max_rows, random_state=42)
+
+    unique_dates = np.sort(model_data["date"].unique())
+    if len(unique_dates) < 3:
+        raise ValueError("At least three different dates are needed for train/val/test split.")
+
+    n = len(unique_dates)
+    train_end = int(n * train_fraction)
+    val_end = int(n * (train_fraction + val_fraction))
+    train_end = min(max(train_end, 1), n - 2)
+    val_end = min(max(val_end, train_end + 1), n - 1)
+
+    val_split_date = pd.Timestamp(unique_dates[train_end])
+    test_split_date = pd.Timestamp(unique_dates[val_end])
+
+    train = model_data[model_data["date"] < val_split_date]
+    val = model_data[(model_data["date"] >= val_split_date) & (model_data["date"] < test_split_date)]
+    test = model_data[model_data["date"] >= test_split_date]
+
+    X_train = train[MODEL_FEATURES]
+    y_train = train[TARGET_COLUMN]
+    X_val = val[MODEL_FEATURES]
+    y_val = val[TARGET_COLUMN]
+    X_test = test[MODEL_FEATURES]
+    y_test = test[TARGET_COLUMN]
+    return X_train, X_val, X_test, y_train, y_val, y_test, val_split_date, test_split_date
+
+
 # %% 10. Train the model and report accuracy metrics
 def _regression_metrics(
     actual: pd.Series,
@@ -631,18 +683,8 @@ def train_and_evaluate_model(
         ]
     )
 
-    boosted_trees = HistGradientBoostingRegressor(
-        loss="absolute_error",
-        learning_rate=0.05,
-        max_iter=300,
-        max_leaf_nodes=31,
-        min_samples_leaf=20,
-        l2_regularization=0.10,
-        random_state=42,
-    )
-    histogram_model = Pipeline(
-        steps=[("preprocessing", preprocessing), ("model", boosted_trees)]
-    )
+    # Build histogram-gradient pipeline using the central model builder
+    histogram_model = build_hist_gradient(NUMERIC_FEATURES, CATEGORICAL_FEATURES)
     # A useful model should beat this simple rule: next hour equals this hour.
     baseline_train = X_train["occupancy"].fillna(y_train.median()).clip(0, 1)
     baseline_predictions = X_test["occupancy"].fillna(y_train.median()).clip(0, 1)
@@ -776,6 +818,116 @@ def train_and_evaluate_model(
         "training_rows": len(X_train),
         "testing_rows": len(X_test),
     }
+
+
+def compare_models(modeling: pd.DataFrame, max_rows: int | None = None) -> dict:
+    """Train a set of candidate regressors and return comparative metrics.
+
+    Trains each candidate to predict the *change* from current occupancy
+    (matching the project's main approach), then reports MAE/RMSE/R2
+    for their final clipped next-hour predictions.
+    """
+    X_train, X_val, X_test, y_train, y_val, y_test, val_split_date, test_split_date = make_time_train_val_test_split(
+        modeling, max_rows=max_rows
+    )
+    # Baseline (persistence) as in `train_and_evaluate_model`
+    baseline_train = X_train["occupancy"].fillna(y_train.median()).clip(0, 1)
+    baseline_val = X_val["occupancy"].fillna(y_train.median()).clip(0, 1)
+    baseline_test = X_test["occupancy"].fillna(y_train.median()).clip(0, 1)
+    occupancy_change = y_train - baseline_train
+
+    # Helper to build a lightweight preprocessing pipeline for non-tree models
+    def _build_pipeline_for(estimator):
+        num_pipe = Pipeline(steps=[("imputer", SimpleImputer(strategy="median")), ("scale", StandardScaler())])
+        cat_pipe = Pipeline(steps=[
+            ("imputer", SimpleImputer(strategy="most_frequent")),
+            ("ordinal", OrdinalEncoder(handle_unknown="use_encoded_value", unknown_value=-1)),
+        ])
+        prep = ColumnTransformer(transformers=[("numeric", num_pipe, NUMERIC_FEATURES), ("categorical", cat_pipe, CATEGORICAL_FEATURES)])
+        return Pipeline(steps=[("preprocessing", prep), ("model", estimator)])
+
+    # Keep a small candidate set: linear, histogram GB, and optional CatBoost
+    candidates = {
+        "Linear regression": _build_pipeline_for(LinearRegression()),
+        "Histogram gradient boosting": build_hist_gradient(NUMERIC_FEATURES, CATEGORICAL_FEATURES),
+    }
+
+    # Optionally include CatBoost when training size is manageable
+    include_catboost = len(X_train) <= 250_000
+    if include_catboost:
+        catboost_model = Pipeline(
+            steps=[
+                (
+                    "prepare_features",
+                    FunctionTransformer(
+                        _prepare_catboost_features,
+                        validate=False,
+                        feature_names_out="one-to-one",
+                    ),
+                ),
+                (
+                    "model",
+                    CatBoostRegressor(
+                        cat_features=CATEGORICAL_FEATURES,
+                        loss_function="MAE",
+                        iterations=500,
+                        depth=8,
+                        learning_rate=0.05,
+                        l2_leaf_reg=5.0,
+                        random_seed=42,
+                        verbose=False,
+                        allow_writing_files=False,
+                    ),
+                ),
+            ]
+        )
+        candidates["CatBoost categorical model"] = catboost_model
+
+    metric_rows = [
+        {"Model": "Current-occupancy baseline", **_regression_metrics(y_test, baseline_test)}
+    ]
+    predictions_dict: dict[str, pd.DataFrame] = {}
+
+    for name, pipeline in candidates.items():
+        # Fit to predict the occupancy change and tune on validation set (no hyperparam search here)
+        pipeline.fit(X_train, occupancy_change)
+        # Validation predictions (for informational purposes)
+        val_change = pipeline.predict(X_val)
+        val_preds = np.clip(baseline_val + val_change, 0, 1)
+        # Test predictions (final reported numbers)
+        test_change = pipeline.predict(X_test)
+        preds = np.clip(baseline_test + test_change, 0, 1)
+        metric_rows.append({"Model": name, **_regression_metrics(y_test, preds)})
+
+        df = X_test.copy()
+        df["actual_next_hour"] = y_test
+        df["baseline_next_hour"] = baseline_test
+        df["predicted_next_hour"] = preds
+        df["absolute_error"] = np.abs(y_test - preds)
+        predictions_dict[name] = df
+
+    metrics = pd.DataFrame(metric_rows).set_index("Model")
+
+    return {
+        "metrics": metrics,
+        "predictions": predictions_dict,
+        "val_split_date": val_split_date,
+        "test_split_date": test_split_date,
+        "training_rows": len(X_train),
+        "validation_rows": len(X_val),
+        "testing_rows": len(X_test),
+    }
+
+
+def save_model(model: object, path: Path) -> None:
+    """Persist a fitted model pipeline to disk using joblib."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    joblib.dump(model, path)
+
+
+def load_model(path: Path) -> object:
+    """Load a persisted model pipeline from disk."""
+    return joblib.load(path)
 
 
 # %% 11. Rank streets by predicted next-hour availability
