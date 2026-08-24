@@ -87,7 +87,54 @@ def _formatted_metrics(metrics: pd.DataFrame) -> pd.DataFrame:
 def load_blockfaces(source_size: int, source_mtime: float) -> pd.DataFrame:
     """Load official SFMTA block geometry and calculate segment midpoints."""
     del source_size, source_mtime
+    # Read the CSV and validate expected columns. Provide helpful errors
+    if not project.BLOCKFACE_FILE.exists():
+        raise FileNotFoundError(
+            f"Blockface file not found: {project.BLOCKFACE_FILE}. "
+            "Restore the official SFMTA block-coordinate CSV and redeploy."
+        )
+
     blockfaces = pd.read_csv(project.BLOCKFACE_FILE)
+
+    expected_cols = [
+        "blockface_id",
+        "block_id",
+        "endpt1_longitude",
+        "endpt1_latitude",
+        "endpt2_longitude",
+        "endpt2_latitude",
+    ]
+
+    # Quick success path
+    missing = [c for c in expected_cols if c not in blockfaces.columns]
+    if missing:
+        # Try case-insensitive and normalized-name mapping to be forgiving of header variations
+        import re
+
+        def normalize(name: str) -> str:
+            return re.sub(r"[^a-z0-9]", "", name.lower())
+
+        cols_map = {normalize(c): c for c in blockfaces.columns}
+        created = False
+        for exp in expected_cols:
+            if exp in blockfaces.columns:
+                continue
+            key = normalize(exp)
+            if key in cols_map:
+                # create a normalized column matching the expected name
+                blockfaces[exp] = blockfaces[cols_map[key]]
+                created = True
+
+        # Recompute missing after attempted mapping
+        missing = [c for c in expected_cols if c not in blockfaces.columns]
+        if missing:
+            raise KeyError(
+                f"Blockface CSV is missing expected columns: {missing}. "
+                f"Found columns: {list(blockfaces.columns)}. "
+                "Ensure the CSV contains the standard SFMTA blockface columns or rename headers accordingly."
+            )
+
+    # Convert expected numeric columns and drop invalid rows
     numeric_columns = [
         "blockface_id",
         "block_id",
