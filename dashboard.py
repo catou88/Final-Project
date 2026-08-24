@@ -449,8 +449,23 @@ else:
         right_on="BLOCK_ID",
         how="left",
     )
+    # tolerant lookup for street name column (accept different header variants)
+    _street_candidates = [
+        "street_name",
+        "STREET_NAME",
+        "street",
+        "streetname",
+        "STNAME",
+        "STREET",
+    ]
+    _found_street = next((c for c in _street_candidates if c in mapped_faces.columns), None)
+    if _found_street is None:
+        raise KeyError(
+            "Required street-name column not found in blockfaces. "
+            f"Tried {_street_candidates}. Available columns: {list(mapped_faces.columns)}"
+        )
     official_block_label = (
-        mapped_faces["street_name"].astype("string").str.title()
+        mapped_faces[_found_street].astype("string").str.title()
         + " "
         + mapped_faces["fm_addr_no"].astype("Int64").astype("string")
         + "–"
