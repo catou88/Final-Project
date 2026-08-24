@@ -1,0 +1,387 @@
+Event ID,Event Name,Event Description,Event Class,Event Information Source,Reference URL,Effective From Date,Effective To Date,From Time,To Time
+557,Folsom Street Fair,Street Fair,StrClose,,,9/24/2017,9/24/2017,3:00 AM,11:00 PM
+556,Folsom Street Fair,Street Fair,StrClose,,,9/25/2016,9/25/2016,3:00 AM,11:00 PM
+491,Oracle Open World,Large Conference,PkDemandUp,,,10/22/2015,10/30/2015,8:00 PM,3:00 PM
+546,Chinese New Year Parade,Parade,StrClose,,,3/7/2015,3/17/2015,5:00 PM,8:00 PM
+531,Chinese Community Street Fair,Fair,StrClose,,,3/6/2015,3/8/2015,11:00 PM,11:00 PM
+548,Chinese New Year Run,Athletic,StrClose,,,2/28/2015,2/28/2015,7:00 AM,10:00 AM
+532,Chinese Flower Market Fair,Fair,StrClose,,,2/13/2015,2/15/2015,11:00 PM,11:00 PM
+584,Nike Marathon,Athletic,StrClose,,,10/19/2014,10/19/2014,,
+490,Oracle Open World,Large Conference,PkDemandUp,,,9/25/2014,10/3/2014,8:00 PM,3:00 PM
+545,Chinese New Year Parade,Parade,StrClose,,,2/15/2014,2/15/2014,5:00 PM,8:00 PM
+530,Chinese Community Street Fair,Fair,StrClose,,,2/14/2014,2/16/2014,11:00 PM,11:00 PM
+547,Chinese New Year Run,Athletic,StrClose,,,2/9/2014,2/9/2014,7:00 AM,10:00 AM
+580,KP SF Half Marathon,Athletic,StrClose,,,2/2/2014,2/2/2014,7:00 AM,10:00 AM
+659,US Fall Half Marathon,Athletic,StrClose,,,11/3/2013,11/3/2013,6:30 AM,10:30 AM
+660,US Fall Half Marathon,Athletic,StrClose,,,11/2/2013,11/3/2013,10:00 AM,1:00 PM
+487,Noe Valley Harvest Festival,Festival,PkDemandUp,,,10/26/2013,10/26/2013,6:00 AM,8:00 PM
+349,Fiesta On The Hill,Fair,PkDemandUp,,,10/20/2013,10/20/2013,12:00 AM,12:00 AM
+583,Nike Marathon,Athletic,StrClose,,,,10/20/2013,,
+453,Litquake,,PkDemandUp,,,10/19/2013,10/19/2013,4:00 PM,11:00 PM
+582,Lower Haight Urban Air Market,,StrClose,,,10/12/2013,10/12/2013,7:00 AM,7:00 PM
+512,Bridge to Bridge Run,Athletic,StrClose,,,10/6/2013,10/6/2013,8:00 AM,10:30 AM
+385,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,9/29/2013,9/29/2013,1:00 PM,5:30 PM
+549,Cole Valley Fair,Fair,StrClose,,,,9/29/2013,6:00 AM,7:00 PM
+555,Folsom Street Fair,Street Fair,StrClose,,,,9/29/2013,3:00 AM,10:00 PM
+562,Folsom Street Fair After Party,,StrClose,,,,9/29/2013,3:00 AM,12:00 AM
+648,Sunday Streets in the Excelsior District,Sunday Streets,StrClose,,,,9/29/2013,10:30 AM,4:30 PM
+384,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,9/28/2013,9/28/2013,1:00 PM,5:30 PM
+440,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,9/27/2013,9/27/2013,7:00 PM,11:30 PM
+439,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,9/26/2013,9/26/2013,7:00 PM,11:30 PM
+438,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,9/25/2013,9/25/2013,7:00 PM,11:30 PM
+437,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,9/24/2013,9/24/2013,7:00 PM,11:30 PM
+340,America's Cup,no street closures,PkDemandUp,,,9/21/2013,9/21/2013,1:00 PM,2:00 PM
+596,Polk St. Blues Festival,Fair,StrClose,,,,9/22/2013,12:00 AM,12:00 AM
+651,Superhero Street Fair,Street Fair,StrClose,,,,9/22/2013,8:00 AM,2:00 AM
+496,Oracle Open World - Java One Conference,Large Conference,PkDemandUp,,,9/20/2013,9/27/2013,8:00 PM,10:00 AM
+348,America's Cup,,PkDemandUp,,,9/19/2013,9/19/2013,1:00 PM,3:00 PM
+489,Oracle Open World,Large Conference,PkDemandUp,,,,9/27/2013,8:00 PM,3:00 PM
+347,America's Cup,,PkDemandUp,,,9/17/2013,9/17/2013,1:00 PM,3:00 PM
+346,America's Cup,,PkDemandUp,,,9/15/2013,9/15/2013,1:00 PM,3:00 PM
+551,Fall Urban Air Market,,StrClose,,,,9/15/2013,7:00 AM,7:00 PM
+345,America's Cup,,PkDemandUp,,,9/14/2013,9/14/2013,1:00 PM,3:00 PM
+521,Chinatown Moon Festival,Fair,StrClose,,,,9/15/2013,12:00 AM,8:00 PM
+344,America's Cup,,PkDemandUp,,,9/12/2013,9/12/2013,1:00 PM,3:00 PM
+366,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,9/11/2013,9/11/2013,12:30 PM,5:00 PM
+343,America's Cup,,PkDemandUp,,,9/10/2013,9/10/2013,1:00 PM,3:00 PM
+436,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,,9/10/2013,7:00 PM,11:30 PM
+435,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,9/9/2013,9/9/2013,7:00 PM,11:30 PM
+342,America's Cup,no street closures,PkDemandUp,,,9/8/2013,9/8/2013,1:00 PM,3:00 PM
+383,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,,9/8/2013,1:00 PM,5:30 PM
+643,Sunday Streets - Western Addition,Sunday Streets,StrClose,,,,9/8/2013,10:30 AM,4:30 PM
+341,America's Cup,no street closures,PkDemandUp,,,9/7/2013,9/7/2013,1:00 PM,3:00 PM
+396,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,,9/7/2013,6:00 PM,10:30 PM
+434,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,9/6/2013,9/6/2013,7:00 PM,11:30 PM
+433,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,9/5/2013,9/5/2013,7:00 PM,11:30 PM
+574,JP Morgan Chase Corporate Challenge,,StrClose,,,9/3/2013,9/3/2013,6:30 PM,8:00 PM
+505,Bay Bridge Celebration - Bicycle Ride,Athletic,StrClose,,,9/1/2013,9/1/2013,10:00 PM,10:00 PM
+506,Bay Bridge Celebration - Half Marathon & 12 K,Athletic,StrClose,,,,9/2/2013,8:00 PM,12:00 PM
+454,Louis Vuitton Cup Finals,no street closures,PkDemandUp,,,8/30/2013,8/30/2013,1:00 PM,3:00 PM
+325,Bay Bridge Closure,,BrdgeClose,,,8/28/2013,9/3/2013,8:00 PM,5:00 AM
+460,Louis Vuitton Cup Finals,no street closures,PkDemandUp,,,,8/28/2013,1:00 PM,3:30 PM
+382,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,8/25/2013,8/25/2013,1:00 PM,5:30 PM
+459,Louis Vuitton Cup Finals,no street closures,PkDemandUp,,,,8/25/2013,1:00 PM,3:30 PM
+395,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,8/24/2013,8/24/2013,6:00 PM,10:30 PM
+458,Louis Vuitton Cup Finals,no street closures,PkDemandUp,,,,8/24/2013,1:00 PM,3:30 PM
+432,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,8/23/2013,8/23/2013,7:00 PM,11:30 PM
+441,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,8/22/2013,8/22/2013,7:30 PM,12:00 AM
+365,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,8/21/2013,8/21/2013,12:30 PM,5:00 PM
+457,Louis Vuitton Cup Finals,no street closures,PkDemandUp,,,,8/21/2013,1:00 PM,3:30 PM
+431,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,8/20/2013,8/20/2013,7:00 PM,11:30 PM
+430,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,8/19/2013,8/19/2013,7:00 PM,11:30 PM
+456,Louis Vuitton Cup Finals,no street closures,PkDemandUp,,,8/18/2013,8/18/2013,1:00 PM,3:30 PM
+642,Sunday Streets - Tenderloin Route,Sunday Streets,StrClose,,,,8/18/2013,10:30 AM,4:30 PM
+455,Louis Vuitton Cup Finals,no street closures,PkDemandUp,,,8/17/2013,8/17/2013,1:00 PM,3:30 PM
+581,La Cocina Street Food Festival,Fair,StrClose,,,,8/17/2013,5:00 AM,11:00 PM
+485,Louis Vuitton Cup Semi-Finals,no street closures,PkDemandUp,,,8/14/2013,8/14/2013,1:00 PM,2:30 PM
+482,Louis Vuitton Cup Semi-Finals,no street closures,PkDemandUp,,,8/13/2013,8/13/2013,1:00 PM,2:00 PM
+381,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,8/11/2013,8/11/2013,1:00 PM,5:30 PM
+484,Louis Vuitton Cup Semi-Finals,no street closures,PkDemandUp,,,,8/11/2013,1:00 PM,2:30 PM
+380,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,8/10/2013,8/10/2013,1:00 PM,5:30 PM
+483,Louis Vuitton Cup Semi-Finals,no street closures,PkDemandUp,,,,8/10/2013,1:00 PM,2:30 PM
+842,Pistahan Parade and Festival,"Parade in conjunction with art festival in Yerba Buena Gardens from 11am to 5pm. Opening ceremony on Saturday at Grove and Larkin in Civic Center. Parade will start on Grove, proceed east on Market Street, south to 4th St to Yerba Buena Gardens.",StrClose,MTA WE T&T,,,8/11/2013,8:00 AM,5:00 PM
+429,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,8/9/2013,8/9/2013,7:00 PM,11:30 PM
+481,Louis Vuitton Cup Semi-Finals,no street closures,PkDemandUp,,,,8/9/2013,1:00 PM,2:00 PM
+841,Outside Lands Festival,"Music festival in Golden Gate Park from noon to 10pm Friday, Saturday, and Sunday. Expected 60,000 attendees each day.",PkDemandUp,MTA WE T&T,,,8/11/2013,12:00 PM,10:00 PM
+364,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,8/8/2013,8/8/2013,12:30 PM,5:00 PM
+828,49ers pre-season home game,49ers home game against Denver Broncos,PkDemandUp,MTA WE T&T,www.sfmta.com/football,,,6:00 PM,
+428,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,8/7/2013,8/7/2013,7:00 PM,11:30 PM
+478,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,,8/7/2013,1:00 PM,2:30 PM
+427,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,8/6/2013,8/6/2013,7:00 PM,11:30 PM
+480,Louis Vuitton Cup Semi-Finals,no street closures,PkDemandUp,,,,8/6/2013,1:00 PM,2:00 PM
+426,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,8/5/2013,8/5/2013,7:00 PM,11:30 PM
+829,Truck accident on Bay Bridge,Truck driving into SF on Bay Bridge caught on fire and closed down all traffic into the city via the bridge for part of the day,BrdgeClose,Internet,http://www.sfgate.com/bayarea/article/Sushi-truck-fire-backs-up-Bay-Bridge-4707080.php,,,,
+477,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,8/4/2013,8/4/2013,1:00 PM,2:30 PM
+476,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,8/3/2013,8/3/2013,1:00 PM,2:30 PM
+503,40th Nihonmachi Street Fair,Fair,StrClose,,,,8/4/2013,4:00 AM,9:00 PM
+563,"Giants 5K, 10K and Half Marathon",Athletic,StrClose,,,,8/4/2013,11:00 PM,11:30 AM
+468,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,8/2/2013,8/2/2013,1:00 PM,2:00 PM
+475,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,7/31/2013,7/31/2013,1:00 PM,2:30 PM
+467,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,7/30/2013,7/30/2013,1:00 PM,2:00 PM
+379,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,7/28/2013,7/28/2013,1:00 PM,5:30 PM
+486,Louis Vuitton Cup Series 3,no street closures,PkDemandUp,,,,7/28/2013,1:00 PM,2:30 PM
+649,Sunday Streets in the Mission,Sunday Streets,StrClose,,,,7/28/2013,10:30 AM,4:30 PM
+658,Up Your Alley Fair,Fair,StrClose,,,,7/28/2013,5:00 AM,9:00 PM
+827,Muni subway construction - early shutdown,"Service shut down between Church and Embarcadero from 9:30 pm to 1 am, replaced with bus and shuttle service",,,,,7/31/2013,,
+394,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,7/27/2013,7/27/2013,6:00 PM,10:30 PM
+425,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,7/26/2013,7/26/2013,7:00 PM,11:30 PM
+466,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,,7/26/2013,1:00 PM,2:00 PM
+825,Critical mass,Critical Mass bicycle ride begins at Justin Herman Plaza,TrnsprtEvt,MTA WE T&T,,,,6:00 PM,
+826,Concert at Candlestick Park,Justin Timberlake and Jay-Z Concert,PkDemandUp,MTA WE T&T,,,,,
+424,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,7/24/2013,7/24/2013,7:00 PM,11:30 PM
+474,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,,7/24/2013,1:00 PM,2:30 PM
+423,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,7/23/2013,7/23/2013,7:00 PM,11:30 PM
+465,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,,7/23/2013,1:00 PM,2:00 PM
+422,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,7/22/2013,7/22/2013,7:00 PM,11:30 PM
+378,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,7/21/2013,7/21/2013,1:00 PM,5:30 PM
+473,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,,7/21/2013,1:00 PM,2:30 PM
+821,AIDS walk,Takes place in Golden Gate park,StrClose,MTA WE T&T,http://www.aidswalk.net/sanfran,,,8:00 AM,2:30 PM
+393,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,7/20/2013,7/20/2013,6:00 PM,10:30 PM
+472,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,,7/20/2013,1:00 PM,2:30 PM
+421,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,7/19/2013,7/19/2013,7:00 PM,11:30 PM
+464,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,,7/19/2013,1:00 PM,2:00 PM
+471,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,7/17/2013,7/17/2013,1:00 PM,2:30 PM
+463,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,7/16/2013,7/16/2013,1:00 PM,2:00 PM
+470,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,7/14/2013,7/14/2013,1:00 PM,2:30 PM
+803,Clement St Farmers market pilot,"Clement St closed from 2nd Ave to 4th Ave, and Muni bus route 2 rerouted during closure",StrClose,MTA WE T&T,,,,7:30 AM,3:30 PM
+469,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,7/13/2013,7/13/2013,1:00 PM,2:30 PM
+802,Muni Metro Turnback Rail Rehab project,"Muni Metro turnback rail rehabilitation construction project will affect the KT, N, and T lines",TrnstSrvDn,MTA WE T&T,,,7/15/2013,1:30 AM,4:00 AM
+462,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,7/12/2013,7/12/2013,1:00 PM,2:00 PM
+801,Market Street Repaving Project,Repaving along Market St between 4th and 6th - no vehicles or bikes allowed through (only Muni),StrClose,MTA WE T&T,,,7/14/2013,,
+363,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,7/10/2013,7/10/2013,12:30 PM,5:00 PM
+479,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,,7/10/2013,2:00 PM,3:00 PM
+420,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,7/9/2013,7/9/2013,7:00 PM,11:30 PM
+461,Louis Vuitton Cup Race,no street closures,PkDemandUp,,,,7/9/2013,1:00 PM,2:00 PM
+419,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,7/8/2013,7/8/2013,7:00 PM,11:30 PM
+350,Fleet Racing,no street closures,PkDemandUp,,,7/7/2013,7/7/2013,1:00 PM,2:30 PM
+377,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,,7/7/2013,1:00 PM,5:30 PM
+647,Sunday Streets @ GG Park and The Great Hwy,Sunday Streets,StrClose,,,,7/7/2013,10:30 AM,4:30 PM
+387,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,7/6/2013,7/6/2013,4:00 PM,8:30 PM
+351,Fleet Racing,no street closures,PkDemandUp,,,7/5/2013,7/5/2013,,
+418,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,,7/5/2013,7:00 PM,11:30 PM
+501,Sailing Races Opening Ceremony,,PkDemandUp,,,7/4/2013,7/4/2013,,
+761,4th of July activities,"Celebration begins along waterfront at 2pm, street closures from Wednesday night through Friday early morning",StrClose,MTA WE T&T,,7/3/2013,7/4/2013,,
+781,BART Strike,,TrnstSrvDn,,,7/1/2013,7/5/2013,,
+550,Dyke March,March,StrClose,,,6/29/2013,6/29/2013,6:00 PM,10:00 PM
+607,SF Pride Celebration,Fair,StrClose,,,6/28/2013,7/1/2013,9:00 AM,6:00 AM
+652,Transgender March,Parade,StrClose,,,,6/28/2013,6:00 PM,9:00 PM
+741,Lincoln Blvd closure for Viaduct truss deconstruction,Steel truss of old High Viaduct deconstruction requires closure of Lincoln Boulevard from 9:30PM to 5:30AM between 6/25/2013-7/9/2013. Road will stay open July 4 and 5.,StrClose,Internet,http://www.presidioparkway.org/,6/25/2013,7/9/2013,9:30 PM,
+376,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,6/23/2013,6/23/2013,1:00 PM,5:30 PM
+375,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,6/22/2013,6/22/2013,1:00 PM,5:30 PM
+722,Subway maintenance,Subway communications systems replacement project over 6 nights starting at 10 pm- service between Church and Embarcadero on bus shuttles,TrnstSrvDn,MTA WE T&T,,,6/27/2013,10:00 PM,
+417,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,6/21/2013,6/21/2013,7:00 PM,11:30 PM
+721,Live Nation Concert,Concert at America's Cup Pavilion at Piers 27/29,PkDemandUp,MTA WE T&T,,,,,
+416,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,6/20/2013,6/20/2013,7:00 PM,11:30 PM
+723,Komen 3-Day Walk,Closures on Treasure Island Thurs-Sun; Closures in SF Sat-Sun,StrClose,MTA WE T&T,www.the3day.org,,6/23/2013,,
+362,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,6/19/2013,6/19/2013,12:30 PM,5:00 PM
+415,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,6/18/2013,6/18/2013,7:00 PM,11:30 PM
+414,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,6/17/2013,6/17/2013,7:00 PM,11:30 PM
+606,SF Marathon,Athletic,StrClose,,,6/16/2013,6/16/2013,,
+579,Juneteenth 2013,Street Fair,StrClose,,,6/15/2013,6/15/2013,,
+701,North Beach Festival,,StrClose,MTA WE T&T,,,6/16/2013,10:00 AM,6:00 PM
+702,Ghirardelli Square Kidsbash,,StrClose,MTA WE T&T,,,,2:00 AM,9:00 PM
+703,4th St Bridge Span Remedial Project,DPW's 4th St bridge span remedial project Friday and Saturday nights,StrClose,MTA WE T&T,,6/14/2013,6/16/2013,,
+650,Sunday Streets; Bayview/Dogpatch,Sunday Streets,StrClose,,,6/9/2013,6/9/2013,,
+568,Haight Ashbury Street Fair,Street Fair,StrClose,,,6/8/2013,6/8/2013,,
+685,Market Street Repaving,"Repaving from Van Ness Ave to 6th St, Muni only allowed through",StrClose,MTA WE T&T,,6/7/2013,6/9/2013,,
+361,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,6/5/2013,6/5/2013,12:30 PM,5:00 PM
+413,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,6/4/2013,6/4/2013,7:00 PM,11:30 PM
+677,BART delay,BART delay due to third rail repair in Transbay Tube,,,,5/31/2013,,,
+360,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/30/2013,5/30/2013,12:30 PM,5:00 PM
+412,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/29/2013,5/29/2013,7:00 PM,11:30 PM
+374,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/26/2013,5/26/2013,1:00 PM,5:30 PM
+514,Carnaval Parade,Parade,StrClose,MTA WE T&T,www.carnavalsanfrancisco.org,,5/26/2013,5:00 AM,5:00 PM
+373,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/25/2013,5/25/2013,1:00 PM,5:30 PM
+513,Carnaval Festival,Festival,StrClose,MTA WE T&T,www.carnavalsanfrancisco.org,,5/26/2013,12:00 AM,12:00 AM
+411,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/24/2013,5/24/2013,7:00 PM,11:30 PM
+359,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/22/2013,5/22/2013,12:30 PM,5:00 PM
+410,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/21/2013,5/21/2013,7:00 PM,11:30 PM
+409,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/20/2013,5/20/2013,7:00 PM,11:30 PM
+511,Bay to Breakers 2013,Race/Party,StrClose,MTA WE T&T,www.baytobreakers.com,5/19/2013,5/19/2013,,
+502,Uncorked! SF Wine Festival,Festival,PkDemandUp,MTA WE T&T,www.ghirardellisq.com,5/18/2013,5/18/2013,12:00 AM,12:00 AM
+504,Asian Heritage Festival,Festival,StrClose,MTA WE T&T,www.asianfairsf.com,,5/18/2013,3:00 AM,9:00 PM
+372,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/12/2013,5/12/2013,1:00 PM,5:30 PM
+371,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/11/2013,5/11/2013,1:00 PM,5:30 PM
+408,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/10/2013,5/10/2013,7:00 PM,11:30 PM
+407,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/9/2013,5/9/2013,7:00 PM,11:30 PM
+358,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/8/2013,5/8/2013,12:30 PM,5:00 PM
+406,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/7/2013,5/7/2013,7:00 PM,11:30 PM
+405,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/6/2013,5/6/2013,7:00 PM,11:30 PM
+389,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/5/2013,5/5/2013,5:00 PM,9:30 PM
+370,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/4/2013,5/4/2013,1:00 PM,5:30 PM
+404,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,5/3/2013,5/3/2013,7:00 PM,11:30 PM
+573,How Weird Street Faire,Street Fair,StrClose,MTA WE T&T,,4/27/2013,4/27/2013,9:00 AM,11:00 PM
+357,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,4/24/2013,4/24/2013,12:30 PM,5:00 PM
+403,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,4/23/2013,4/23/2013,7:00 PM,11:30 PM
+402,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,4/22/2013,4/22/2013,7:00 PM,11:30 PM
+369,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,4/21/2013,4/21/2013,1:00 PM,5:30 PM
+392,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,4/20/2013,4/20/2013,6:00 PM,10:30 PM
+515,Cesar Chavez Parade and Festival,Festival/parade,StrClose,MTA WE T&T,,,4/20/2013,9:00 AM,7:00 PM
+516,Cheery Blossom Festival and Parade,Festival/parade,StrClose,MTA WE T&T,www.sfcherryblossom.org,,4/21/2013,4:00 AM,11:00 PM
+401,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,4/19/2013,4/19/2013,7:00 PM,11:30 PM
+356,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,4/10/2013,4/10/2013,12:30 PM,5:00 PM
+400,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,4/9/2013,4/9/2013,7:00 PM,11:30 PM
+399,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,4/8/2013,4/8/2013,7:00 PM,11:30 PM
+368,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,4/7/2013,4/7/2013,1:00 PM,5:30 PM
+367,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,4/6/2013,4/6/2013,1:00 PM,5:30 PM
+386,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,4/5/2013,4/5/2013,1:30 PM,6:00 PM
+398,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,3/29/2013,3/29/2013,7:00 PM,11:30 PM
+397,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,3/28/2013,3/28/2013,7:00 PM,11:30 PM
+388,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,3/19/2013,3/19/2013,5:00 PM,9:30 PM
+391,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,3/18/2013,3/18/2013,6:00 PM,10:30 PM
+390,Giants Home Game,Baseball game,PkDemandUp,Internet,http://sanfrancisco.giants.mlb.com/schedule/,3/17/2013,3/17/2013,6:00 PM,10:30 PM
+823,Mission Bay/SoMa special event pricing begins,,,,,,,,
+612,St Patrick's Day Parade 2013,Parade,StrClose,,,3/16/2013,3/16/2013,,
+822,Mission Bay/SoMa extended hours goes into effect,,,,,3/4/2013,,,
+824,Sunday metering begins,,,,,1/6/2013,,,
+330,Central Subway Construction,Construction,Construct,,,1/1/2013,,,
+21,Muni 100th Anniversary - free Muni,,,,http://www.sfmta.com/cms/apress/ComeonandtakefreerideonMuni.htm,12/28/2012,,,
+675,Christmas,Holiday,TrnstSrvDn,,,12/25/2012,12/25/2012,,
+41,Parking sensor outage,StreetSmart back-end system upgrade. No parking sensor data exists for the week.,,,,12/10/2012,12/17/2012,,
+690,Parking via 511 web,511 added parking availability to its website,,,,11/26/2012,,,
+43,IPS meter data feed outage,No meter data feed,,,,11/1/2012,11/15/2012,9:30 AM,8:00 PM
+641,Sunday Streets - Outer Mission/Excelsior,Sunday Streets,StrClose,,,10/21/2012,10/21/2012,,
+588,Nike Women's Marathon 2012,Race,StrClose,,,10/14/2012,10/14/2012,,
+355,Fleet Week,Large Event,PkDemandUp,,,10/6/2012,10/7/2012,,
+452,Hardly Strictly Bluegrass,Major Concert,PkDemandUp,,,10/5/2012,10/7/2012,,
+495,Oracle Open World,Large Conference,PkDemandUp,,,9/30/2012,10/4/2012,,
+561,Folsom Street Fair,Street Fair,StrClose,,,9/23/2012,9/23/2012,,
+525,Chinatown Moon Festival 2012,Festival,StrClose,,,9/22/2012,9/23/2012,,
+646,Sunday Streets - Western Addition,Sunday Streets,StrClose,,,9/9/2012,9/9/2012,,
+618,Sunday Streets - Chinatown,Sunday Streets,StrClose,,,8/26/2012,8/26/2012,,
+640,Sunday Streets - Mission,Sunday Streets,StrClose,,,8/5/2012,8/5/2012,,
+605,San Francisco Marathon,race,StrClose,,,7/29/2012,7/29/2012,,
+617,Sunday Streets - Bayview,Sunday Streets,StrClose,,,7/22/2012,7/22/2012,,
+339,4th of July,Party,PkDemandUp,,,7/4/2012,7/4/2012,,
+639,Sunday Streets - Mission,Sunday Streets,StrClose,,,7/1/2012,7/1/2012,,
+500,Pride Weekend,,PkDemandUp,,,6/23/2012,6/24/2012,,
+595,Pink Saturday/Dyke March 2012,Parade,StrClose,,,,6/23/2012,,
+488,North Beach Festival,Festival,PkDemandUp,,,6/16/2012,6/17/2012,,
+578,Juneteenth 2012,Street Fair,StrClose,,,,6/17/2012,,
+676,Transbay tube closure due to fire,Service disruption,TrnstSrvDn,,,6/14/2012,6/14/2012,,
+567,Haight Ashbury Street Fair,Street Fair,StrClose,,,6/10/2012,6/10/2012,,
+638,Sunday Streets - Mission,Sunday Streets,StrClose,,,6/3/2012,6/3/2012,,
+656,Union Street Fair,Street Fair,StrClose,,,6/2/2012,6/3/2012,,
+691,SFpark text service ends,,,,,6/1/2012,,,
+603,San Francisco Carnaval,Festival,StrClose,,,5/26/2012,5/27/2012,,
+689,Parking via 511 phone,511 adds parking availability to its phone service,,,,5/23/2012,,,
+510,Bay to Breakers 2012,Race,StrClose,,,5/20/2012,5/20/2012,,
+572,How Weird Festival 2012,Street Fair,StrClose,,,5/13/2012,5/13/2012,,
+669,Bike to Work Day 2012,Other,TrnsprtEvt,,,5/10/2012,5/10/2012,,
+637,Sunday Streets - Mission,Sunday Streets,StrClose,,,5/6/2012,5/6/2012,,
+331,Doyle Drive Closure,Construction,Construct,,,4/27/2012,4/30/2012,,
+630,Sunday Streets - Great Highway,Sunday Streets,StrClose,,,4/15/2012,4/15/2012,,
+520,Cherry Blossom Festival 2012,Street Fair,StrClose,,,4/5/2012,4/5/2012,,
+611,St Patrick's Day Parade 2012,Parade,StrClose,,,3/17/2012,3/17/2012,,
+623,Sunday Streets - Embarcadero,Sunday Streets,StrClose,,,3/11/2012,3/11/2012,,
+529,Chinatown YMCA 10K/5K/Walk 2012,Race,StrClose,,,2/19/2012,2/19/2012,,
+329,Bay Bridge Closures,Construction,Construct,,,2/17/2012,2/20/2012,,
+540,Chinese New Year 2012,Parade,StrClose,,,2/11/2012,2/11/2012,,
+544,Chinese New Year Community Street Fair 2012,Street Fair,StrClose,,,,2/12/2012,,
+664,Vietnamese Tet Festival,Street Fair,StrClose,,,1/15/2012,1/15/2012,,
+536,Chinese Flower Market Fair 2012,Street Fair,StrClose,,,1/14/2012,1/15/2012,,
+335,2012 New Year,Party,PkDemandUp,,,12/31/2011,1/1/2012,,
+674,Christmas,Holiday,TrnstSrvDn,,,12/25/2011,12/25/2011,,
+687,SFpark app launch Android,SFpark app for Android launched,,,http://sfpark.org/2011/11/10/sfmta-releases-sfpark-android-app/,11/7/2011,,,
+636,Sunday Streets - Mission,Sunday Streets,StrClose,,,10/23/2011,10/23/2011,,
+587,Nike Women's Marathon 2011,Race,StrClose,,,10/16/2011,10/16/2011,,
+354,Fleet Week,Large Event,PkDemandUp,,,10/8/2011,10/9/2011,,
+494,Oracle Open World,Large Conference,PkDemandUp,,,10/1/2011,10/6/2011,,
+451,Hardly Strictly Bluegrass,Major Concert,PkDemandUp,,,9/30/2011,10/2/2011,,
+688,SFpark text service,Text message for SFpark launched,,Internet,http://sfpark.org/2011/09/15/the-sfmta-debuts-sfpark-garage-availability-texting-service/,9/15/2011,,,
+645,Sunday Streets - Western Addition,Sunday Streets,StrClose,,,9/11/2011,9/11/2011,,
+524,Chinatown Moon Festival 2011,Street Fair,StrClose,,,9/10/2011,9/10/2011,,
+671,BART Protest,Other,TrnstSrvDn,,,8/26/2011,8/26/2011,,
+560,Folsom Street Fair,Street Fair,StrClose,,,8/23/2011,8/23/2011,,
+620,Sunday Streets - Civic Center/TL,Sunday Streets,StrClose,,,8/14/2011,8/14/2011,,
+499,Outsidelands,Major Concert,PkDemandUp,,,8/12/2011,8/14/2011,,
+670,BART Protest,Other,TrnstSrvDn,,,8/11/2011,8/11/2011,,
+604,San Francisco Marathon,Race,StrClose,,,7/31/2011,7/31/2011,,
+629,Sunday Streets - Great Highway,Sunday Streets,StrClose,,,7/10/2011,7/10/2011,,
+338,4th of July,Party,PkDemandUp,,,7/4/2011,7/4/2011,,
+554,Fillmore Jazz Festival,Street Fair,StrClose,,,7/3/2011,7/3/2011,,
+594,Pink Saturday/Dyke March 2011,Parade,StrClose,,,6/25/2011,6/25/2011,,
+599,Pride Weekend,Street Fair,StrClose,,,,6/26/2011,,
+577,Juneteenth 2011,Street Fair,StrClose,,,6/18/2011,6/19/2011,,
+591,North Beach Festival,Street Fair,StrClose,,,,6/19/2011,,
+566,Haight Ashbury Street Fair,Street Fair,StrClose,,,6/12/2011,6/12/2011,,
+616,Sunday Streets - Bayview,Sunday Streets,StrClose,,,,6/12/2011,,
+655,Union Street Fair,Street Fair,StrClose,,,6/4/2011,6/5/2011,,
+328,Bay Bridge Closures,Construction,Construct,,,5/28/2011,5/29/2011,,
+602,San Francisco Carnaval,Street Fair,StrClose,,,5/21/2011,5/22/2011,,
+509,Bay to Breakers 2011,Race,StrClose,,,5/15/2011,5/15/2011,,
+668,Bike to Work Day 2011,Other,TrnsprtEvt,,,5/12/2011,5/12/2011,,
+635,Sunday Streets - Mission,Sunday Streets,StrClose,,,5/8/2011,5/8/2011,,
+571,How Weird Festival 2011,Street Fair,StrClose,,,5/1/2011,5/1/2011,,
+686,SFpark app launch,iPhone and web map app launch,,Internet,http://sfpark.org/2011/04/21/mayor-lee-launches-sfpark-project/,4/24/2011,,,
+519,Cherry Blossom Festival 2011,Street Fair,StrClose,,,4/17/2011,4/17/2011,,
+628,Sunday Streets - Great Highway,Sunday Streets,StrClose,,,4/10/2011,4/10/2011,,
+622,Sunday Streets - Embarcadero,Sunday Streets,StrClose,,,3/20/2011,3/20/2011,,
+610,St Patrick's Day Parade 2011,Parade,StrClose,,,3/12/2011,3/12/2011,,
+539,Chinese New Year 2011,Parade,StrClose,,,2/19/2011,2/19/2011,,
+543,Chinese New Year Community Street Fair 2011,Street Fair,StrClose,,,,2/20/2011,,
+327,Bay Bridge Closures,Construction,Construct,,,2/18/2011,2/20/2011,,
+528,Chinatown YMCA 10K/5K/Walk 2011,Race,StrClose,,,2/13/2011,2/13/2011,,
+663,Vietnamese Tet Festival,Street Fair,StrClose,,,1/30/2011,1/30/2011,,
+535,Chinese Flower Market Fair 2011,Street Fair,StrClose,,,1/29/2011,1/30/2011,,
+334,2011 New Year,Party,PkDemandUp,,,12/31/2010,1/1/2011,,
+673,Christmas,Holiday,TrnstSrvDn,,,12/25/2010,12/25/2010,,
+586,Nike Women's Marathon 2010,Race,StrClose,,,11/4/2010,11/4/2010,,
+665,World Series Parade and street party,Parade and street party,StrClose,,,11/3/2010,11/3/2010,,
+448,Giants Home Game,Baseball game,PkDemandUp,,,10/28/2010,10/28/2010,,
+447,Giants Home Game,Baseball game,PkDemandUp,,,10/27/2010,10/27/2010,,
+446,Giants Home Game,Baseball game,PkDemandUp,,,10/21/2010,10/21/2010,,
+445,Giants Home Game,Baseball game,PkDemandUp,,,10/20/2010,10/20/2010,,
+444,Giants Home Game,Baseball game,PkDemandUp,,,10/19/2010,10/19/2010,,
+353,Fleet Week,Large Event,PkDemandUp,,,10/9/2010,10/10/2010,,
+443,Giants Home Game,Baseball game,PkDemandUp,,,10/8/2010,10/8/2010,,
+442,Giants Home Game,Baseball game,PkDemandUp,,,10/7/2010,10/7/2010,,
+450,Hardly Strictly Bluegrass,Major Concert,PkDemandUp,,,10/1/2010,10/3/2010,,
+559,Folsom Street Fair,Street Fair,StrClose,,,9/26/2010,9/26/2010,,
+493,Oracle Open World,Large Conference,PkDemandUp,,,9/19/2010,9/23/2010,,
+644,Sunday Streets - Western Addition,Sunday Streets,StrClose,,,,9/19/2010,,
+523,Chinatown Moon Festival 2010,Street Fair,StrClose,,,9/17/2010,9/17/2010,,
+619,Sunday Streets - Civic Center/TL,Sunday Streets,StrClose,,,8/24/2010,8/24/2010,,
+627,Sunday Streets - Great Highway,Sunday Streets,StrClose,,,8/22/2010,8/22/2010,,
+498,Outsidelands,Major Concert,PkDemandUp,,,8/14/2010,8/15/2010,,
+634,Sunday Streets - Mission,Sunday Streets,StrClose,,,7/11/2010,7/11/2010,,
+337,4th of July,Party,PkDemandUp,,,7/4/2010,7/4/2010,,
+553,Fillmore Jazz Festival,Street Fair,StrClose,,,7/3/2010,7/4/2010,,
+593,Pink Saturday/Dyke March 2010,Parade,StrClose,,,6/26/2010,6/26/2010,,
+598,Pride Weekend,Street Fair,StrClose,,,,6/27/2010,,
+633,Sunday Streets - Mission,Sunday Streets,StrClose,,,6/20/2010,6/20/2010,,
+576,Juneteenth 2010,Street Fair,StrClose,,,6/19/2010,6/20/2012,,
+590,North Beach Festival,Street Fair,StrClose,,,,6/20/2010,,
+565,Haight Ashbury Street Fair,Street Fair,StrClose,,,6/13/2010,6/13/2010,,
+654,Union Street Fair,Street Fair,StrClose,,,6/5/2010,6/6/2010,,
+601,San Francisco Carnaval,Street Fair,StrClose,,,5/29/2010,5/30/2010,,
+615,Sunday Streets - Bayview,Sunday Streets,StrClose,,,5/23/2010,5/23/2010,,
+508,Bay to Breakers 2010,Race,StrClose,,,5/16/2010,5/16/2010,,
+667,Bike to Work Day 2010,Other,TrnsprtEvt,,,5/13/2010,5/13/2010,,
+570,How Weird Festival 2010,Street Fair,StrClose,,,5/9/2010,5/9/2010,,
+614,Sunday Streets - Bayview,Sunday Streets,StrClose,,,4/18/2010,4/18/2010,,
+626,Sunday Streets - Great Highway,Sunday Streets,StrClose,,,4/11/2010,4/11/2010,,
+518,Cherry Blossom Festival 2010,Street Fair,StrClose,,,4/10/2010,4/11/2010,,
+621,Sunday Streets - Embarcadero,Sunday Streets,StrClose,,,3/14/2010,3/14/2010,,
+609,St Patrick's Day Parade 2010,Parade,StrClose,,,3/13/2010,3/13/2010,,
+527,Chinatown YMCA 10K/5K/Walk 2010,Race,StrClose,,,2/20/2010,2/20/2010,,
+662,Vietnamese Tet Festival,Street Fair,StrClose,,,2/7/2010,2/7/2010,,
+534,Chinese Flower Market Fair 2010,Street Fair,StrClose,,,2/6/2010,2/7/2010,,
+538,Chinese New Year 2010,Parade,StrClose,,,,2/6/2010,,
+542,Chinese New Year Community Street Fair 2010,Street Fair,StrClose,,,,2/7/2010,,
+333,2010 New Year,Party,PkDemandUp,,,12/31/2009,1/1/2010,,
+672,Christmas,Holiday,TrnstSrvDn,,,12/25/2009,12/25/2009,,
+585,Nike Women's Marathon 2009,Race,StrClose,,,10/18/2009,10/18/2009,,
+492,Oracle Open World,Large Conference,PkDemandUp,,,10/11/2009,10/15/2009,,
+352,Fleet Week,Large Event,PkDemandUp,,,10/10/2009,10/11/2009,,
+449,Hardly Strictly Bluegrass,Major Concert,PkDemandUp,,,10/2/2009,10/4/2009,,
+558,Folsom Street Fair,Street Fair,StrClose,,,9/27/2009,9/27/2009,,
+522,Chinatown Moon Festival 2009,Street Fair,StrClose,,,9/19/2009,9/20/2009,,
+326,Bay Bridge Closures,Construction,Construct,,,9/3/2009,9/7/2009,,
+497,Outsidelands,Major Concert,PkDemandUp,,,8/28/2009,8/30/2009,,
+625,Sunday Streets - Great Highway,Sunday Streets,StrClose,,,8/9/2009,8/9/2009,,
+624,Sunday Streets - Great Highway,Sunday Streets,StrClose,,,8/6/2009,8/6/2009,,
+657,Up your Alley,Street Fair,StrClose,,,7/29/2009,7/29/2009,,
+632,Sunday Streets - Mission,Sunday Streets,StrClose,,,7/19/2009,7/19/2009,,
+552,Fillmore Jazz Festival,Street Fair,StrClose,,,7/7/2009,7/8/2009,,
+336,4th of July,Party,PkDemandUp,,,7/4/2009,7/4/2009,,
+592,Pink Saturday/Dyke March 2009,Parade,StrClose,,,6/27/2009,6/27/2009,,
+597,Pride Weekend,Street Fair,StrClose,,,,6/28/2009,,
+575,Juneteenth 2009,Street Fair,StrClose,,,6/20/2009,6/21/2009,,
+564,Haight Ashbury Street Fair,Street Fair,StrClose,,,6/14/2009,6/14/2009,,
+589,North Beach Festival,Street Fair,StrClose,,,6/13/2009,6/14/2009,,
+631,Sunday Streets - Mission,Sunday Streets,StrClose,,,6/7/2009,6/7/2009,,
+653,Union Street Fair,Street Fair,StrClose,,,6/6/2009,6/7/2009,,
+600,San Francisco Carnaval,Street Fair,StrClose,,,5/23/2009,5/24/2009,,
+507,Bay to Breakers 2009,Race,StrClose,,,5/17/2009,5/17/2009,,
+666,Bike to Work Day 2009,Other,TrnsprtEvt,,,5/14/2009,5/14/2009,,
+569,How Weird Festival 2009,Street Fair,StrClose,,,5/10/2009,5/10/2009,,
+613,Sunday Streets - Bayview,Sunday Streets,StrClose,,,,5/10/2009,,
+517,Cherry Blossom Festival 2009,Street Fair,StrClose,,,4/17/2009,4/18/2009,,
+608,St Patrick's Day Parade 2009,Parade,StrClose,,,3/16/2009,3/16/2009,,
+526,Chinatown YMCA 10K/5K/Walk 2009,Race,StrClose,,,2/15/2009,2/15/2009,,
+537,Chinese New Year 2009,Parade,StrClose,,,2/7/2009,2/7/2009,,
+541,Chinese New Year Community Street Fair 2009,Street Fair,StrClose,,,,2/8/2009,,
+533,Chinese Flower Market Fair 2009,Street Fair,StrClose,,,1/24/2009,1/25/2009,,
+661,Vietnamese Tet Festival,Street Fair,StrClose,,,1/18/2009,1/18/2009,,
+332,2009 New Year,Party,PkDemandUp,,,12/31/2008,1/1/2009,,
