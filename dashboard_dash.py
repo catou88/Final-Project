@@ -211,7 +211,7 @@ def radius_circle(
 # 4. Figure and table builders
 # ---------------------------------------------------------------------------
 
-def empty_map(latitude: float = 37.7879, longitude: float = -122.4075):
+def empty_map(latitude: float = 37.7946, longitude: float = -122.3999):
     """Create an empty San Francisco map used before the first prediction."""
     figure = go.Figure()
     figure.update_layout(
@@ -554,7 +554,7 @@ app.layout = html.Div(
                         dcc.Input(
                             id="destination-input",
                             type="text",
-                            value="Union Square, San Francisco, CA",
+                            value="Financial District, San Francisco, CA",
                             placeholder="Enter an SF address or landmark",
                             style=INPUT_STYLE,
                         ),

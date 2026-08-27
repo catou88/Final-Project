@@ -327,10 +327,10 @@ st.markdown(
 
 if "parking_destination" not in st.session_state:
     st.session_state.parking_destination = {
-        "query": "Union Square, San Francisco, CA",
-        "display_name": "Union Square, San Francisco, California",
-        "latitude": 37.7879363,
-        "longitude": -122.4075174,
+        "query": "Financial District, San Francisco, CA",
+        "display_name": "Financial District, San Francisco, California",
+        "latitude": 37.7946,
+        "longitude": -122.3999,
     }
 
 with st.form("destination_search"):
