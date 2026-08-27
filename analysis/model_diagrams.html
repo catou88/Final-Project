@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parking Prediction Model Diagrams</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #667085;
+      --line: #d0d5dd;
+      --panel: #ffffff;
+      --bg: #f5f7fa;
+      --blue: #2563eb;
+      --teal: #0f766e;
+      --green: #15803d;
+      --amber: #b45309;
+      --red: #b42318;
+      --violet: #7c3aed;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.4;
+    }
+
+    main {
+      width: min(1180px, calc(100vw - 40px));
+      margin: 32px auto 56px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .diagram {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      box-shadow: 0 14px 32px rgba(16, 24, 40, 0.08);
+    }
+
+    .wide {
+      grid-column: 1 / -1;
+    }
+
+    .diagram h2 {
+      margin: 0 0 14px;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .caption {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .box {
+      fill: #ffffff;
+      stroke: var(--line);
+      stroke-width: 2;
+      rx: 7;
+    }
+
+    .feature {
+      fill: #eff6ff;
+      stroke: #93c5fd;
+    }
+
+    .model {
+      fill: #ecfdf5;
+      stroke: #86efac;
+    }
+
+    .output {
+      fill: #fff7ed;
+      stroke: #fdba74;
+    }
+
+    .eval {
+      fill: #f5f3ff;
+      stroke: #c4b5fd;
+    }
+
+    .tree {
+      fill: #f0fdfa;
+      stroke: #5eead4;
+    }
+
+    .cat {
+      fill: #fdf2f8;
+      stroke: #f9a8d4;
+    }
+
+    .label {
+      fill: var(--ink);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .small {
+      fill: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .formula {
+      fill: #1d2939;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .arrow {
+      stroke: #475467;
+      stroke-width: 2.6;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+
+    .soft-arrow {
+      stroke: #98a2b3;
+      stroke-width: 2.2;
+      fill: none;
+      marker-end: url(#arrowhead-soft);
+    }
+
+    .divider {
+      stroke: #eaecf0;
+      stroke-width: 2;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        width: min(760px, calc(100vw - 28px));
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Parking Availability Model Diagrams</h1>
+  <p class="subtitle">Slide-ready visuals for explaining the methodology behind the models.</p>
+
+  <div class="grid">
+    <section class="diagram wide">
+      <h2>Overall Modeling Pipeline</h2>
+      <svg viewBox="0 0 1100 250" role="img" aria-label="Modeling pipeline diagram">
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L9,3 z" fill="#475467"></path>
+          </marker>
+          <marker id="arrowhead-soft" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L9,3 z" fill="#98a2b3"></path>
+          </marker>
+        </defs>
+        <rect class="box feature" x="25" y="65" width="220" height="120"></rect>
+        <text class="label" x="135" y="105" text-anchor="middle">Input Features</text>
+        <text class="small" x="135" y="132" text-anchor="middle">time, location, weather</text>
+        <text class="small" x="135" y="153" text-anchor="middle">events, past occupancy</text>
+
+        <path class="arrow" d="M255 125 H340"></path>
+
+        <rect class="box model" x="355" y="65" width="220" height="120"></rect>
+        <text class="label" x="465" y="105" text-anchor="middle">Model Training</text>
+        <text class="small" x="465" y="132" text-anchor="middle">Linear Regression</text>
+        <text class="small" x="465" y="153" text-anchor="middle">Boosting, CatBoost</text>
+
+        <path class="arrow" d="M585 125 H670"></path>
+
+        <rect class="box output" x="685" y="65" width="180" height="120"></rect>
+        <text class="label" x="775" y="105" text-anchor="middle">Prediction</text>
+        <text class="small" x="775" y="132" text-anchor="middle">future parking</text>
+        <text class="small" x="775" y="153" text-anchor="middle">availability %</text>
+
+        <path class="arrow" d="M875 125 H960"></path>
+
+        <rect class="box eval" x="975" y="65" width="110" height="120"></rect>
+        <text class="label" x="1030" y="105" text-anchor="middle">Evaluate</text>
+        <text class="small" x="1030" y="132" text-anchor="middle">MAE</text>
+        <text class="small" x="1030" y="153" text-anchor="middle">RMSE, R²</text>
+      </svg>
+      <p class="caption">Use this as the first methodology slide: features go into several models, then predictions are evaluated.</p>
+    </section>
+
+    <section class="diagram">
+      <h2>Linear Regression</h2>
+      <svg viewBox="0 0 540 360" role="img" aria-label="Linear regression diagram">
+        <defs>
+          <marker id="lr-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L9,3 z" fill="#475467"></path>
+          </marker>
+        </defs>
+        <rect class="box feature" x="25" y="35" width="150" height="48"></rect>
+        <rect class="box feature" x="25" y="94" width="150" height="48"></rect>
+        <rect class="box feature" x="25" y="153" width="150" height="48"></rect>
+        <rect class="box feature" x="25" y="212" width="150" height="48"></rect>
+        <rect class="box feature" x="25" y="271" width="150" height="48"></rect>
+        <text class="small" x="100" y="65" text-anchor="middle">hour</text>
+        <text class="small" x="100" y="124" text-anchor="middle">day of week</text>
+        <text class="small" x="100" y="183" text-anchor="middle">weather</text>
+        <text class="small" x="100" y="242" text-anchor="middle">events</text>
+        <text class="small" x="100" y="301" text-anchor="middle">location</text>
+
+        <rect class="box model" x="240" y="98" width="120" height="164"></rect>
+        <text class="label" x="300" y="150" text-anchor="middle">Weights</text>
+        <text class="formula" x="300" y="188" text-anchor="middle">w₁...w₅</text>
+        <text class="small" x="300" y="218" text-anchor="middle">plus bias</text>
+
+        <rect class="box output" x="405" y="130" width="110" height="100"></rect>
+        <text class="label" x="460" y="168" text-anchor="middle">Output</text>
+        <text class="small" x="460" y="195" text-anchor="middle">availability %</text>
+
+        <path class="soft-arrow" marker-end="url(#lr-arrow)" d="M180 59 C210 60, 215 122, 238 140"></path>
+        <path class="soft-arrow" marker-end="url(#lr-arrow)" d="M180 118 C210 120, 216 145, 238 155"></path>
+        <path class="soft-arrow" marker-end="url(#lr-arrow)" d="M180 177 H238"></path>
+        <path class="soft-arrow" marker-end="url(#lr-arrow)" d="M180 236 C210 234, 216 214, 238 202"></path>
+        <path class="soft-arrow" marker-end="url(#lr-arrow)" d="M180 295 C210 292, 215 240, 238 220"></path>
+        <path class="arrow" marker-end="url(#lr-arrow)" d="M365 180 H395"></path>
+
+        <text class="formula" x="270" y="335" text-anchor="middle">prediction = weighted sum of features</text>
+      </svg>
+      <p class="caption">Best as a baseline: simple and interpretable, but often too rigid for nonlinear parking patterns.</p>
+    </section>
+
+    <section class="diagram wide">
+      <h2>Decision Tree Logic</h2>
+      <svg viewBox="0 0 1100 520" role="img" aria-label="Decision tree diagram">
+        <defs>
+          <marker id="tree-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L9,3 z" fill="#475467"></path>
+          </marker>
+        </defs>
+        <rect class="box tree" x="460" y="24" width="180" height="60"></rect>
+        <text class="label" x="550" y="60" text-anchor="middle">Hour of Day?</text>
+
+        <rect class="box feature" x="230" y="138" width="190" height="64"></rect>
+        <text class="label" x="325" y="164" text-anchor="middle">Location Area?</text>
+        <text class="small" x="325" y="187" text-anchor="middle">morning pattern</text>
+
+        <rect class="box feature" x="680" y="138" width="190" height="64"></rect>
+        <text class="label" x="775" y="164" text-anchor="middle">Location Area?</text>
+        <text class="small" x="775" y="187" text-anchor="middle">evening pattern</text>
+
+        <rect class="box cat" x="80" y="260" width="170" height="60"></rect>
+        <text class="label" x="165" y="285" text-anchor="middle">Event Nearby?</text>
+        <text class="small" x="165" y="306" text-anchor="middle">downtown morning</text>
+
+        <rect class="box cat" x="315" y="260" width="170" height="60"></rect>
+        <text class="label" x="400" y="285" text-anchor="middle">Event Nearby?</text>
+        <text class="small" x="400" y="306" text-anchor="middle">neighborhood morning</text>
+
+        <rect class="box cat" x="615" y="260" width="170" height="60"></rect>
+        <text class="label" x="700" y="285" text-anchor="middle">Event Nearby?</text>
+        <text class="small" x="700" y="306" text-anchor="middle">downtown evening</text>
+
+        <rect class="box cat" x="850" y="260" width="170" height="60"></rect>
+        <text class="label" x="935" y="285" text-anchor="middle">Event Nearby?</text>
+        <text class="small" x="935" y="306" text-anchor="middle">neighborhood evening</text>
+
+        <rect class="box output" x="28" y="412" width="106" height="58"></rect>
+        <text class="small" x="81" y="436" text-anchor="middle">Prediction</text>
+        <text class="small" x="81" y="456" text-anchor="middle">A</text>
+
+        <rect class="box output" x="148" y="412" width="106" height="58"></rect>
+        <text class="small" x="201" y="436" text-anchor="middle">Prediction</text>
+        <text class="small" x="201" y="456" text-anchor="middle">B</text>
+
+        <rect class="box output" x="293" y="412" width="106" height="58"></rect>
+        <text class="small" x="346" y="436" text-anchor="middle">Prediction</text>
+        <text class="small" x="346" y="456" text-anchor="middle">C</text>
+
+        <rect class="box output" x="413" y="412" width="106" height="58"></rect>
+        <text class="small" x="466" y="436" text-anchor="middle">Prediction</text>
+        <text class="small" x="466" y="456" text-anchor="middle">D</text>
+
+        <rect class="box output" x="578" y="412" width="106" height="58"></rect>
+        <text class="small" x="631" y="436" text-anchor="middle">Prediction</text>
+        <text class="small" x="631" y="456" text-anchor="middle">E</text>
+
+        <rect class="box output" x="698" y="412" width="106" height="58"></rect>
+        <text class="small" x="751" y="436" text-anchor="middle">Prediction</text>
+        <text class="small" x="751" y="456" text-anchor="middle">F</text>
+
+        <rect class="box output" x="843" y="412" width="106" height="58"></rect>
+        <text class="small" x="896" y="436" text-anchor="middle">Prediction</text>
+        <text class="small" x="896" y="456" text-anchor="middle">G</text>
+
+        <rect class="box output" x="963" y="412" width="106" height="58"></rect>
+        <text class="small" x="1016" y="436" text-anchor="middle">Prediction</text>
+        <text class="small" x="1016" y="456" text-anchor="middle">H</text>
+
+        <path class="arrow" marker-end="url(#tree-arrow)" d="M500 84 C430 112, 370 122, 326 135"></path>
+        <path class="arrow" marker-end="url(#tree-arrow)" d="M600 84 C670 112, 730 122, 774 135"></path>
+
+        <path class="arrow" marker-end="url(#tree-arrow)" d="M286 203 C236 230, 198 244, 168 257"></path>
+        <path class="arrow" marker-end="url(#tree-arrow)" d="M364 203 C376 228, 389 240, 398 257"></path>
+        <path class="arrow" marker-end="url(#tree-arrow)" d="M736 203 C720 228, 707 240, 701 257"></path>
+        <path class="arrow" marker-end="url(#tree-arrow)" d="M814 203 C864 230, 904 244, 933 257"></path>
+
+        <path class="arrow" marker-end="url(#tree-arrow)" d="M133 321 C104 352, 88 378, 82 409"></path>
+        <path class="arrow" marker-end="url(#tree-arrow)" d="M197 321 C205 352, 206 378, 202 409"></path>
+        <path class="arrow" marker-end="url(#tree-arrow)" d="M368 321 C352 352, 346 378, 346 409"></path>
+        <path class="arrow" marker-end="url(#tree-arrow)" d="M432 321 C454 352, 464 378, 466 409"></path>
+        <path class="arrow" marker-end="url(#tree-arrow)" d="M668 321 C644 352, 633 378, 632 409"></path>
+        <path class="arrow" marker-end="url(#tree-arrow)" d="M732 321 C750 352, 754 378, 752 409"></path>
+        <path class="arrow" marker-end="url(#tree-arrow)" d="M903 321 C893 352, 890 378, 895 409"></path>
+        <path class="arrow" marker-end="url(#tree-arrow)" d="M967 321 C1000 352, 1014 378, 1016 409"></path>
+
+        <text class="small" x="430" y="112" text-anchor="middle">morning</text>
+        <text class="small" x="670" y="112" text-anchor="middle">evening</text>
+        <text class="small" x="238" y="230" text-anchor="middle">downtown</text>
+        <text class="small" x="397" y="230" text-anchor="middle">neighborhood</text>
+        <text class="small" x="705" y="230" text-anchor="middle">downtown</text>
+        <text class="small" x="868" y="230" text-anchor="middle">neighborhood</text>
+        <text class="small" x="111" y="354" text-anchor="middle">yes</text>
+        <text class="small" x="211" y="354" text-anchor="middle">no</text>
+        <text class="small" x="354" y="354" text-anchor="middle">yes</text>
+        <text class="small" x="454" y="354" text-anchor="middle">no</text>
+        <text class="small" x="650" y="354" text-anchor="middle">yes</text>
+        <text class="small" x="746" y="354" text-anchor="middle">no</text>
+        <text class="small" x="896" y="354" text-anchor="middle">yes</text>
+        <text class="small" x="1002" y="354" text-anchor="middle">no</text>
+      </svg>
+      <p class="caption">A tree learns combinations: event status can matter within each time and location branch. Real boosted models combine many trees with different feature orders and thresholds.</p>
+    </section>
+
+    <section class="diagram">
+      <h2>Histogram Gradient Boosting</h2>
+      <svg viewBox="0 0 540 360" role="img" aria-label="Histogram gradient boosting diagram">
+        <defs>
+          <marker id="gb-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L9,3 z" fill="#475467"></path>
+          </marker>
+        </defs>
+        <rect class="box tree" x="35" y="80" width="105" height="90"></rect>
+        <text class="label" x="88" y="116" text-anchor="middle">Tree 1</text>
+        <text class="small" x="88" y="143" text-anchor="middle">first guess</text>
+
+        <rect class="box tree" x="170" y="80" width="105" height="90"></rect>
+        <text class="label" x="223" y="116" text-anchor="middle">Tree 2</text>
+        <text class="small" x="223" y="143" text-anchor="middle">fix errors</text>
+
+        <rect class="box tree" x="305" y="80" width="105" height="90"></rect>
+        <text class="label" x="358" y="116" text-anchor="middle">Tree 3</text>
+        <text class="small" x="358" y="143" text-anchor="middle">fix errors</text>
+
+        <rect class="box tree" x="440" y="80" width="70" height="90"></rect>
+        <text class="label" x="475" y="116" text-anchor="middle">...</text>
+        <text class="small" x="475" y="143" text-anchor="middle">many</text>
+
+        <path class="arrow" marker-end="url(#gb-arrow)" d="M145 125 H160"></path>
+        <path class="arrow" marker-end="url(#gb-arrow)" d="M280 125 H295"></path>
+        <path class="arrow" marker-end="url(#gb-arrow)" d="M415 125 H430"></path>
+
+        <line class="divider" x1="62" y1="215" x2="478" y2="215"></line>
+        <path class="soft-arrow" marker-end="url(#gb-arrow)" d="M88 170 V208"></path>
+        <path class="soft-arrow" marker-end="url(#gb-arrow)" d="M223 170 V208"></path>
+        <path class="soft-arrow" marker-end="url(#gb-arrow)" d="M358 170 V208"></path>
+        <path class="soft-arrow" marker-end="url(#gb-arrow)" d="M475 170 V208"></path>
+
+        <rect class="box output" x="150" y="250" width="240" height="70"></rect>
+        <text class="label" x="270" y="281" text-anchor="middle">Final Prediction</text>
+        <text class="small" x="270" y="305" text-anchor="middle">sum of many small tree corrections</text>
+        <path class="arrow" marker-end="url(#gb-arrow)" d="M270 218 V242"></path>
+      </svg>
+      <p class="caption">Strong for structured data because it learns nonlinear patterns and feature interactions.</p>
+    </section>
+
+    <section class="diagram">
+      <h2>CatBoost</h2>
+      <svg viewBox="0 0 540 360" role="img" aria-label="CatBoost diagram">
+        <defs>
+          <marker id="cat-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L9,3 z" fill="#475467"></path>
+          </marker>
+        </defs>
+        <rect class="box cat" x="35" y="38" width="190" height="118"></rect>
+        <text class="label" x="130" y="76" text-anchor="middle">Categorical</text>
+        <text class="label" x="130" y="101" text-anchor="middle">Features</text>
+        <text class="small" x="130" y="129" text-anchor="middle">street block, weekday</text>
+
+        <rect class="box model" x="315" y="38" width="190" height="118"></rect>
+        <text class="label" x="410" y="79" text-anchor="middle">CatBoost</text>
+        <text class="small" x="410" y="107" text-anchor="middle">smart category handling</text>
+        <text class="small" x="410" y="130" text-anchor="middle">plus boosted trees</text>
+
+        <path class="arrow" marker-end="url(#cat-arrow)" d="M235 97 H303"></path>
+
+        <rect class="box tree" x="80" y="220" width="120" height="72"></rect>
+        <text class="small" x="140" y="262" text-anchor="middle">Tree 1</text>
+        <rect class="box tree" x="210" y="220" width="120" height="72"></rect>
+        <text class="small" x="270" y="262" text-anchor="middle">Tree 2</text>
+        <rect class="box tree" x="340" y="220" width="120" height="72"></rect>
+        <text class="small" x="400" y="262" text-anchor="middle">Tree N</text>
+
+        <path class="arrow" marker-end="url(#cat-arrow)" d="M410 157 C410 188, 338 202, 285 216"></path>
+        <path class="soft-arrow" marker-end="url(#cat-arrow)" d="M203 256 H207"></path>
+        <path class="soft-arrow" marker-end="url(#cat-arrow)" d="M333 256 H337"></path>
+        <text class="formula" x="270" y="335" text-anchor="middle">useful when location categories matter</text>
+      </svg>
+      <p class="caption">A good fit when block, neighborhood, weekday, and event labels carry important signal.</p>
+    </section>
+
+    <section class="diagram wide">
+      <h2>Model Comparison</h2>
+      <svg viewBox="0 0 1100 360" role="img" aria-label="Model comparison table">
+        <rect class="box" x="25" y="30" width="1050" height="285"></rect>
+        <line class="divider" x1="25" y1="92" x2="1075" y2="92"></line>
+        <line class="divider" x1="25" y1="165" x2="1075" y2="165"></line>
+        <line class="divider" x1="25" y1="238" x2="1075" y2="238"></line>
+        <line class="divider" x1="245" y1="30" x2="245" y2="315"></line>
+        <line class="divider" x1="515" y1="30" x2="515" y2="315"></line>
+        <line class="divider" x1="785" y1="30" x2="785" y2="315"></line>
+
+        <text class="label" x="135" y="68" text-anchor="middle">Model</text>
+        <text class="label" x="380" y="68" text-anchor="middle">How It Works</text>
+        <text class="label" x="650" y="68" text-anchor="middle">Why Useful</text>
+        <text class="label" x="930" y="68" text-anchor="middle">Main Limitation</text>
+
+        <text class="label" x="135" y="135" text-anchor="middle">Linear Regression</text>
+        <text class="small" x="380" y="125" text-anchor="middle">weighted sum</text>
+        <text class="small" x="380" y="146" text-anchor="middle">of features</text>
+        <text class="small" x="650" y="125" text-anchor="middle">simple baseline</text>
+        <text class="small" x="650" y="146" text-anchor="middle">easy to explain</text>
+        <text class="small" x="930" y="125" text-anchor="middle">too simple for</text>
+        <text class="small" x="930" y="146" text-anchor="middle">nonlinear behavior</text>
+
+        <text class="label" x="135" y="208" text-anchor="middle">Hist. Boosting</text>
+        <text class="small" x="380" y="198" text-anchor="middle">many trees correct</text>
+        <text class="small" x="380" y="219" text-anchor="middle">previous errors</text>
+        <text class="small" x="650" y="198" text-anchor="middle">captures interactions</text>
+        <text class="small" x="650" y="219" text-anchor="middle">in tabular data</text>
+        <text class="small" x="930" y="198" text-anchor="middle">less interpretable</text>
+        <text class="small" x="930" y="219" text-anchor="middle">than baseline</text>
+
+        <text class="label" x="135" y="281" text-anchor="middle">CatBoost</text>
+        <text class="small" x="380" y="271" text-anchor="middle">boosting with strong</text>
+        <text class="small" x="380" y="292" text-anchor="middle">category handling</text>
+        <text class="small" x="650" y="271" text-anchor="middle">great for location</text>
+        <text class="small" x="650" y="292" text-anchor="middle">and time categories</text>
+        <text class="small" x="930" y="271" text-anchor="middle">more complex</text>
+        <text class="small" x="930" y="292" text-anchor="middle">can overfit</text>
+      </svg>
+      <p class="caption">Use this as a summary slide after explaining the individual model diagrams.</p>
+    </section>
+  </div>
+</main>
+</body>
+</html>
